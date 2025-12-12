@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useAuth } from '@/contexts/AuthContext';
-import { Gamepad2, Mail, Lock, Zap } from 'lucide-react';
+import { Gamepad2, Mail, Lock, Zap, ArrowLeft } from 'lucide-react';
 import { toast } from 'sonner';
 
 const Login = () => {
@@ -43,6 +43,16 @@ const Login = () => {
       <div className="absolute bottom-40 left-20 w-3 h-3 bg-accent animate-float" style={{ animationDelay: '1s' }} />
 
       <div className="w-full max-w-md relative z-10">
+        {/* Back button */}
+        <Button
+          variant="ghost"
+          onClick={() => navigate('/')}
+          className="mb-6"
+        >
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Back to Home
+        </Button>
+
         {/* Logo */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-3 mb-4">
