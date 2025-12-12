@@ -34,17 +34,11 @@ export function HeroSection() {
             Unlock your potential as a quality champion.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex items-center justify-center">
             <Link to="/login">
-              <Button variant="hero" size="xl" className="w-full sm:w-auto">
+              <Button variant="hero" size="xl">
                 <Zap className="w-5 h-5 mr-2" />
                 Start Learning
-              </Button>
-            </Link>
-            <Link to="/#how-it-works">
-              <Button variant="outline" size="xl" className="w-full sm:w-auto">
-                <Trophy className="w-5 h-5 mr-2" />
-                How It Works
               </Button>
             </Link>
           </div>
