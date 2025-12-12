@@ -3,525 +3,519 @@ import { Module, Instructor } from "@/types/course";
 export const modules: Module[] = [
   {
     id: 1,
-    title: "Introduction to Exploratory Testing",
-    description: "Learn the fundamentals of exploratory testing and why it's essential for quality software.",
+    title: "Getting Started with Testing",
+    description: "Welcome to Test IO Academy! Learn the basics and what you need before you start testing.",
     isUnlocked: true,
     isCompleted: false,
     articleContent: `
-# Introduction to Exploratory Testing
+# Welcome to Test IO Academy!
 
-Exploratory testing is an approach to software testing that emphasizes the personal freedom and responsibility of individual testers. It's simultaneously a way to learn, a way to design tests, and a way to execute tests.
+We are so happy you have decided to join our tester community!
 
-## What is Exploratory Testing?
+This quick start guide is meant to cover the basics and enable you to be successful in your testing journey.
 
-Unlike scripted testing, where tests are designed and documented before execution, exploratory testing involves:
+## What is Software Testing?
 
-- **Simultaneous Learning**: You learn about the software as you test it
-- **Test Design**: You design tests on-the-fly based on what you discover
-- **Test Execution**: You execute tests immediately as you design them
+When a development team works on a project, unintentional behaviors can be added to the product. The tester's job consists of testing products simulating a real user looking for these development errors, called **bugs**, validating implementations, and checking the product health based on the original product requirements.
 
-## Key Principles
+## Your Role as a Tester
 
-### 1. Charter-Based Testing
-Create a focused mission for your testing session. For example: "Explore the login functionality looking for security vulnerabilities."
+As a tester, you will work with crowd-testing on web, mobile, and IoT products. Your main goal is to deliver the best results based on customers' interests and requirements for each test cycle.
 
-### 2. Time-Boxing
-Set specific time limits for your testing sessions (usually 60-90 minutes) to maintain focus and energy.
+## Key Concepts
 
-### 3. Note-Taking
-Document your findings, questions, and observations as you test. This helps with:
-- Remembering what you tested
-- Sharing knowledge with the team
-- Creating regression test cases
+### What is a Bug?
 
-## Benefits of Exploratory Testing
+A bug is a software-related problem. If something on a website or in an application does not work as it was intended to, this "error" is called a bug.
 
-1. **Finds More Bugs**: Testers can adapt and explore areas that scripted tests might miss
-2. **Faster Feedback**: No need to write detailed test cases upfront
-3. **Better Coverage**: Testers think creatively and cover edge cases
-4. **Improved Skills**: Testers develop deeper product knowledge
+### Types of Testing
 
-## When to Use Exploratory Testing
+- **Exploratory Testing**: Freely explore the application to find bugs
+- **Test Case Testing**: Follow specific test cases to verify functionality
+- **Regression Testing**: Verify that new changes haven't broken existing features
 
-- Early in development when requirements are unclear
-- After major changes to quickly assess impact
-- When time is limited
-- To supplement automated testing
+## The Testing Process
 
-Ready to test your knowledge? Take the quiz below!
+1. **Receive Test Invitations**: You'll be invited to test cycles that match your profile
+2. **Accept the Test**: Review the test scope and accept if you can participate
+3. **Read Instructions**: Carefully review all test requirements
+4. **Start Testing**: Begin exploring the application within the defined scope
+5. **Report Bugs**: Document any issues you find following the proper format
+6. **Get Paid**: Earn money for approved bug reports
+
+## Setting Up for Success
+
+Before you start testing, make sure you have:
+
+- A reliable internet connection
+- Updated browsers and devices
+- Screen recording software installed
+- A quiet environment for recording
+
+Now you're ready to learn about the different types of bugs!
     `,
     quiz: {
       questions: [
         {
           id: 1,
-          question: "What is a key characteristic of exploratory testing?",
+          question: "What is a bug in software testing?",
           options: [
-            "Tests are designed and documented weeks in advance",
-            "Simultaneous learning, test design, and execution",
-            "Only automated tests are used",
-            "Following strict test scripts"
+            "A new feature that needs to be added",
+            "A software-related problem where something doesn't work as intended",
+            "A request from the customer",
+            "A type of insect that affects computers"
           ],
           correctAnswer: 1
         },
         {
           id: 2,
-          question: "What is 'time-boxing' in exploratory testing?",
+          question: "What is the main goal of a software tester?",
           options: [
-            "Testing only during business hours",
-            "Setting specific time limits for testing sessions",
-            "Packaging test results in boxes",
-            "Testing the time-related features only"
+            "To write new code for the application",
+            "To find development errors by simulating a real user",
+            "To design the user interface",
+            "To manage the development team"
           ],
           correctAnswer: 1
         },
         {
           id: 3,
-          question: "When is exploratory testing most useful?",
+          question: "What should you do before starting a test cycle?",
           options: [
-            "Only in production environments",
-            "When requirements are perfectly documented",
-            "Early in development when requirements are unclear",
-            "Only for mobile applications"
+            "Start testing immediately",
+            "Read the test instructions carefully",
+            "Skip the scope and requirements",
+            "Report random bugs"
           ],
-          correctAnswer: 2
+          correctAnswer: 1
         }
       ],
-      passingScore: 2
+      passingScore: 80
     }
   },
   {
     id: 2,
-    title: "Session-Based Test Management",
-    description: "Master the art of organizing and tracking your exploratory testing sessions.",
+    title: "Types of Bugs",
+    description: "Learn about the different categories of bugs: Functional, Content, Visual, and Usability.",
     isUnlocked: false,
     isCompleted: false,
     articleContent: `
-# Session-Based Test Management (SBTM)
+# Types of Bugs
 
-Session-Based Test Management is a method for measuring and managing exploratory testing. It provides structure while maintaining the flexibility that makes exploratory testing powerful.
+A bug is a software-related problem. If something on a website or in an application does not work as it was intended to, this "error" is called a bug. Here are the main categories:
 
-## What is a Testing Session?
+## 1. Functional Bugs
 
-A session is an uninterrupted period of testing, typically lasting 60-120 minutes. Each session has:
+Functional bugs are related to the **functionality** of a piece of software.
 
-- **Charter**: A mission statement describing what to test and why
-- **Time Box**: A fixed duration for the session
-- **Tester**: The person conducting the session
+### Examples:
+- A button doesn't submit a form
+- The search doesn't react to user input
+- The app crashes
+- A feature doesn't work as expected
 
-## Session Components
+### Severity Levels:
 
-### 1. Session Sheet
-Document your session with:
-- Start and end times
-- Charter/mission
-- Areas tested
-- Bugs found
-- Questions raised
-- Notes and observations
+**LOW:** Minimal impact on product usage. An easy workaround exists.
 
-### 2. Debriefing
-After each session:
-- Review findings with the team
-- Discuss coverage and risks
-- Plan follow-up sessions
+**HIGH:** Serious impact but main functionality is intact. No workaround exists.
 
-## Metrics in SBTM
+**CRITICAL:** Prevents core functionality. A showstopper that blocks main processes.
 
-Track your testing with these metrics:
+## 2. Content Bugs
 
-- **Session Time**: Total time spent in sessions
-- **Bug Count**: Number of issues discovered
-- **Coverage**: Percentage of the product explored
-- **Charter Completion**: Did you accomplish your mission?
+Content bugs relate to the actual content of websites or apps: text, labels, pictures, videos, icons, links, data, etc.
 
-## Best Practices
+### Examples:
+- Broken links or images (404s)
+- Missing text or empty tooltips
+- Missing translations
+- Missing data
 
-1. Keep sessions focused on a single area or feature
-2. Take breaks between sessions
-3. Vary your testing approaches
-4. Collaborate with developers
-5. Use tools to capture evidence
+### Important: When a content problem occurs repetitively, it may only be submitted **once**.
 
-Now you're ready to structure your exploratory testing!
+## 3. Visual Bugs
+
+Visual bugs relate to the graphical user interfaces of websites or apps.
+
+### Examples:
+- Misaligned texts or elements
+- Responsive design problems
+- Text/elements overlapping each other
+- Text/elements being cut off
+
+## 4. Usability Suggestions
+
+These are not bugs but suggestions for improvement. If a feature works consistently but could be better, it's a usability suggestion.
+
+## What's NOT a Bug?
+
+- Spelling bugs (unless specifically requested)
+- Security bugs (e.g., XSS attacks)
+- Forced bugs (caused by non-typical behavior)
+- Browser or OS bugs
     `,
     quiz: {
       questions: [
         {
           id: 1,
-          question: "What is a typical duration for an exploratory testing session?",
+          question: "Which type of bug occurs when a button doesn't submit a form?",
           options: [
-            "5-10 minutes",
-            "60-120 minutes",
-            "8 hours",
-            "1 week"
+            "Content Bug",
+            "Visual Bug",
+            "Functional Bug",
+            "Usability Suggestion"
           ],
-          correctAnswer: 1
+          correctAnswer: 2
         },
         {
           id: 2,
-          question: "What is a 'charter' in SBTM?",
+          question: "What severity level is appropriate for a bug that prevents the checkout process?",
           options: [
-            "A legal document",
-            "A mission statement describing what to test",
-            "A type of bug report",
-            "A testing tool"
+            "Low",
+            "Medium",
+            "High",
+            "Critical"
           ],
-          correctAnswer: 1
+          correctAnswer: 3
         },
         {
           id: 3,
-          question: "What should happen after each testing session?",
+          question: "A broken image on a website is typically classified as what type of bug?",
           options: [
-            "Delete all notes",
-            "Take a one-week break",
-            "Debriefing to review findings",
-            "Write no documentation"
+            "Functional Bug",
+            "Content Bug",
+            "Visual Bug",
+            "Critical Bug"
           ],
-          correctAnswer: 2
+          correctAnswer: 1
         }
       ],
-      passingScore: 2
+      passingScore: 80
     }
   },
   {
     id: 3,
-    title: "Bug Hunting Techniques",
-    description: "Develop advanced skills for finding bugs that others miss.",
+    title: "Bug Report Requirements",
+    description: "Master the art of writing clear, professional bug reports that get approved.",
     isUnlocked: false,
     isCompleted: false,
     articleContent: `
-# Advanced Bug Hunting Techniques
+# Bug Report Requirements
 
-Great exploratory testers develop a toolkit of techniques for finding elusive bugs. This module covers advanced strategies for uncovering hidden defects.
+Writing a good bug report is essential for getting your work approved.
 
-## Heuristics for Bug Hunting
+## Bug Report Must Include:
+- **Severity** (for functional bugs): Low, High, or Critical
+- **Title**: What happened, where, and when
+- **URL**: The page where the bug occurs
+- **Steps to Reproduce**: How to trigger the bug
+- **Actual Result**: What happened after the steps
+- **Expected Result**: What should have happened
+- **Attachments**: Screenshots or screencasts as evidence
+- **Environment**: Device and browser used
 
-### 1. Boundary Testing
-Test at the edges:
-- Minimum and maximum values
-- Empty fields
-- Very long inputs
-- Special characters
+## Title Rules
 
-### 2. State Transitions
-Explore how the application moves between states:
-- Login → Dashboard → Logout
-- Create → Edit → Delete
-- Valid → Invalid → Valid again
+The title should answer: **WHAT, WHERE, WHEN**
 
-### 3. Error Handling
-Deliberately cause errors:
-- Invalid inputs
-- Network disconnection
-- Concurrent operations
-- Resource exhaustion
+❌ **Wrong**: "Error shown on the Cart page"
+✅ **Correct**: "'Checkout' button from the Cart page navigates users to an 'Error 500' page"
 
-## The SFDPOT Heuristic
+## Steps to Reproduce
 
-Use this mnemonic to explore testing dimensions:
+- **First step**: Access the landing page URL or open the app
+- **Middle steps**: Actions taken to reach the bug
+- **Last step**: The action that triggers the bug (NOT "observe")
 
-- **S**tructure: How is it built?
-- **F**unction: What does it do?
-- **D**ata: What data does it process?
-- **P**latform: What does it depend on?
-- **O**perations: How will it be used?
-- **T**ime: How does time affect it?
+### Good Example:
+1. Go to http://www.example.com
+2. Enter a search query in the search bar
+3. Click on "Search Now" button
+4. Select "Sort by price: High to Low"
 
-## Common Bug Patterns
+## Actual Result vs Expected Result
 
-### Race Conditions
-Actions performed simultaneously can cause unexpected behavior.
+- **Actual Result**: Detailed description of what actually happens
+- **Expected Result**: What should have happened if everything worked correctly
 
-### Off-by-One Errors
-Look for issues at array boundaries and loop limits.
-
-### Unicode Issues
-Test with international characters and emojis.
-
-### Security Vulnerabilities
-- SQL injection
-- Cross-site scripting
-- Authentication bypass
-
-## Documentation Tips
-
-When you find a bug:
-1. Capture the exact steps to reproduce
-2. Note the expected vs. actual behavior
-3. Gather evidence (screenshots, logs)
-4. Rate severity and priority
-
-You're now equipped with powerful bug hunting techniques!
+Both must be detailed and NOT just opposites of each other.
     `,
     quiz: {
       questions: [
         {
           id: 1,
-          question: "What does the 'S' in SFDPOT stand for?",
+          question: "A bug report title should answer which three questions?",
           options: [
-            "Security",
-            "Structure",
-            "Speed",
-            "Software"
+            "Who, Why, How",
+            "What, Where, When",
+            "Before, During, After",
+            "Start, Middle, End"
           ],
           correctAnswer: 1
         },
         {
           id: 2,
-          question: "Which is a boundary testing technique?",
+          question: "Why is 'Observe' NOT acceptable as a step?",
           options: [
-            "Testing only happy paths",
-            "Testing minimum and maximum values",
-            "Testing only in production",
-            "Testing without documentation"
+            "It's too long",
+            "It's not an action taken by the user",
+            "It's spelled wrong",
+            "It's too technical"
           ],
           correctAnswer: 1
         },
         {
           id: 3,
-          question: "What should you include when documenting a bug?",
+          question: "What should the first step in 'Steps to Reproduce' contain?",
           options: [
-            "Only your personal opinion",
-            "Steps to reproduce and evidence",
-            "Nothing, just remember it",
-            "Only the bug title"
+            "The bug description",
+            "The word 'Observe'",
+            "An indication to access the landing page URL or open the app",
+            "The expected result"
           ],
-          correctAnswer: 1
+          correctAnswer: 2
         }
       ],
-      passingScore: 2
+      passingScore: 80
     }
   },
   {
     id: 4,
-    title: "Exploratory Testing Tools",
-    description: "Learn about tools that enhance your exploratory testing workflow.",
+    title: "Bug Report Attachments",
+    description: "Learn how to create professional screenshots and screencasts for your bug reports.",
     isUnlocked: false,
     isCompleted: false,
     articleContent: `
-# Essential Exploratory Testing Tools
+# Bug Report Attachments
 
-The right tools can significantly enhance your exploratory testing efficiency. This module covers tools every exploratory tester should know.
+Each bug must be documented with at least one attachment as proof.
 
-## Screen Recording Tools
+## Screenshot or Screencast?
 
-### Why Record?
-- Capture exact reproduction steps
-- Share bugs with developers
-- Document your testing journey
+### Screencast Required When:
+- An action is required to trigger the bug
+- It's a functional bug (always requires screencast)
 
-### Popular Options
-- OBS Studio (Free, cross-platform)
-- Loom (Easy sharing)
-- Built-in OS recorders
+### Screenshot Sufficient When:
+- The bug is static (no action needed)
+- It's a visual or content bug
 
-## Note-Taking Tools
+## General Requirements
 
-### Session Notes
-Keep track of:
-- What you tested
-- What you found
-- Questions for later
+### Must Have:
+- New attachments for every bug report
+- Date and time visible
+- URL field visible (for website tests)
+- High resolution
 
-### Recommended Tools
-- Notion
-- Obsidian
-- RapidReporter
+### Must NOT Have:
+- Information about other customers
+- Personal or unprofessional data
+- Noise in recordings
 
-## Browser DevTools
+## Screencast Requirements
 
-Essential for web testing:
-- **Network tab**: Monitor API calls
-- **Console**: Check for JavaScript errors
-- **Elements**: Inspect and modify DOM
-- **Application**: View storage and cookies
+- **Format**: MP4 only
+- **Maximum size**: 25 MB
+- **Maximum length**: 60 seconds for bug reports
+- Clicks/taps must be visible
+- Mouse cursor must be visible
 
-## API Testing Tools
+## Screenshot Requirements
 
-- Postman
-- Insomnia
-- curl
-
-## Accessibility Tools
-
-- axe DevTools
-- WAVE
-- Color contrast analyzers
-
-## Performance Tools
-
-- Lighthouse
-- WebPageTest
-- Chrome Performance tab
-
-## Mind Mapping
-
-Visualize your testing coverage:
-- XMind
-- Miro
-- draw.io
-
-## Best Practices
-
-1. **Don't over-tool**: Use only what helps
-2. **Learn shortcuts**: Speed up your workflow
-3. **Customize**: Adapt tools to your needs
-4. **Share knowledge**: Help your team learn
-
-With these tools, you're ready to test more effectively!
+- **Format**: JPG or PNG
+- **Highlight** the bug on your screenshot
+- Date and time visible
     `,
     quiz: {
       questions: [
         {
           id: 1,
-          question: "Why should you record your testing sessions?",
-          options: [
-            "To post on social media",
-            "To capture reproduction steps and share bugs",
-            "Recording is never useful",
-            "Only for compliance"
-          ],
-          correctAnswer: 1
+          question: "What file format must screencasts be in?",
+          options: ["AVI", "MOV", "MP4", "WMV"],
+          correctAnswer: 2
         },
         {
           id: 2,
-          question: "Which browser DevTools tab shows API calls?",
-          options: [
-            "Elements",
-            "Sources",
-            "Network",
-            "Security"
-          ],
-          correctAnswer: 2
+          question: "What is the maximum length for a bug report screencast?",
+          options: ["30 seconds", "60 seconds", "90 seconds", "120 seconds"],
+          correctAnswer: 1
         },
         {
           id: 3,
-          question: "What is a best practice when using testing tools?",
-          options: [
-            "Use every tool available",
-            "Never use any tools",
-            "Use only what helps, don't over-tool",
-            "Only use paid tools"
-          ],
+          question: "What must be visible in every attachment?",
+          options: ["Your personal email", "Other browser tabs", "Current date and time", "Your bookmarks"],
           correctAnswer: 2
         }
       ],
-      passingScore: 2
+      passingScore: 80
     }
   },
   {
     id: 5,
-    title: "Testing in Agile Teams",
-    description: "Integrate exploratory testing into agile development workflows.",
+    title: "Exploratory Testing",
+    description: "Master the art of exploratory testing - finding bugs through creative exploration.",
     isUnlocked: false,
     isCompleted: false,
     articleContent: `
-# Exploratory Testing in Agile
+# Exploratory Testing
 
-Agile development moves fast. Learn how to integrate exploratory testing into sprints and deliver quality at speed.
+Exploratory testing is a software testing technique where you actively explore the application to identify defects using creativity and intuition.
 
-## The Agile Testing Mindset
+## What Makes Exploratory Testing Different?
 
-### Shift Left
-Start testing early:
-- Review user stories
-- Participate in refinement
-- Test in development environments
+- Does NOT rely on pre-written test cases
+- Emphasizes the tester's creativity
+- Is performed in an ad-hoc manner
+- Focuses on investigating different parts of the software
 
-### Continuous Quality
-Quality is everyone's responsibility:
-- Developers test their code
-- Testers provide expertise
-- Team shares knowledge
+## Key Characteristics:
+- **Creative Freedom**: Explore as you see fit
+- **Time-Limited**: Tests typically run 2-24 hours
+- **Scope-Defined**: Specific areas may be in scope
+- **Black Box Testing**: Limited information about the system
 
-## Exploratory Testing in Sprints
+## How to Be Successful
 
-### Sprint Planning
-- Identify testing needs
-- Estimate testing effort
-- Plan session charters
+1. **Creativity**: Think outside the box
+2. **Curiosity**: Ask "What happens if I...?"
+3. **Attention to Detail**: Notice small inconsistencies
+4. **Understanding User Perspective**: Think like a real user
+5. **Systematic Approach**: Be methodical even while exploring
 
-### During the Sprint
-- Test stories as they're completed
-- Provide rapid feedback
-- Document and track bugs
+## The Process
 
-### Sprint Review
-- Demo testing findings
-- Discuss quality metrics
-- Plan improvements
+### Before the Test:
+1. Read all test instructions
+2. Understand the scope
+3. Set up your devices and tools
 
-## Pairing and Mobbing
+### During the Test:
+1. Access the test environment
+2. Start a test session
+3. Explore systematically
+4. Document bugs you find
 
-### Pair Testing
-- Tester + Developer
-- Share knowledge
-- Find bugs faster
-
-### Mob Testing
-- Whole team explores together
-- Different perspectives
-- Great for complex features
-
-## Automation Support
-
-Exploratory testing and automation work together:
-- Automate repetitive checks
-- Free up time for exploration
-- Use automation to set up test data
-
-## Continuous Integration
-
-- Test in CI/CD pipelines
-- Catch regressions early
-- Maintain deployment velocity
-
-## Metrics for Agile Teams
-
-- Bug escape rate
-- Time to find bugs
-- Coverage per sprint
-- Team confidence score
-
-You're now ready to bring exploratory testing to your agile team!
+### After Finding a Bug:
+1. Verify it's reproducible
+2. Check it's within scope
+3. Document it properly
     `,
     quiz: {
       questions: [
         {
           id: 1,
-          question: "What does 'Shift Left' mean in agile testing?",
+          question: "What is the main characteristic of exploratory testing?",
           options: [
-            "Move testing to the left side of the screen",
-            "Start testing early in the development process",
-            "Only test on left-handed devices",
-            "Skip testing entirely"
+            "Following strict test scripts",
+            "Actively exploring with creativity and intuition",
+            "Only testing pre-defined scenarios",
+            "Automated testing only"
           ],
           correctAnswer: 1
         },
         {
           id: 2,
-          question: "What is 'pair testing'?",
-          options: [
-            "Testing in pairs of two applications",
-            "A tester and developer testing together",
-            "Testing twice",
-            "Using two monitors"
-          ],
+          question: "How long do typical test cycles run?",
+          options: ["1 week", "2-24 hours", "1 month", "1 year"],
           correctAnswer: 1
         },
         {
           id: 3,
-          question: "How do automation and exploratory testing work together?",
+          question: "What does 'black box testing' mean?",
           options: [
-            "They don't, choose one or the other",
-            "Automate everything, skip exploration",
-            "Automate repetitive checks, free up time for exploration",
-            "Only use automation in production"
+            "Testing in a dark room",
+            "Testing with full access to source code",
+            "Testing with limited information about the system",
+            "Testing only black-colored elements"
           ],
           correctAnswer: 2
         }
       ],
-      passingScore: 2
+      passingScore: 80
+    }
+  },
+  {
+    id: 6,
+    title: "The Test Process",
+    description: "Understand the complete testing workflow from receiving invitations to getting paid.",
+    isUnlocked: false,
+    isCompleted: false,
+    articleContent: `
+# The Test Process
+
+Understanding the complete test process will help you succeed and earn money for approved bug reports.
+
+## Test Invitations
+
+When a customer submits a test, the system matches testers based on:
+- Profile information
+- Available devices
+- Individual performance
+
+**Tip**: Add all your devices to increase invitations.
+
+## Tester Levels
+
+- **Level 1 (Copper)**: Can participate in 2 test cycles at once
+- **Level 2+ (Bronze and above)**: Can join unlimited tests
+
+## Participating in a Test
+
+### Before the Test:
+1. Read all instructions
+2. Understand the scope
+3. Prepare your devices
+
+### When the Test Begins:
+1. Access the test environment
+2. Start a Test Session
+3. Begin bug hunting
+
+## Submitting Bugs
+
+1. Start a Test Session (required)
+2. Click "Submit Bug"
+3. Select the correct Feature
+4. Fill in all fields
+5. Add attachments
+6. Submit
+
+## Review Process
+
+1. **Team Leader Review**: Approves or rejects reports
+2. **Customer Review**: Makes final decision
+
+## Getting Paid
+
+You get paid for approved bug reports based on:
+- Bug type
+- Severity level
+- Test type
+    `,
+    quiz: {
+      questions: [
+        {
+          id: 1,
+          question: "How many test cycles can a Level 1 (Copper) tester participate in at once?",
+          options: ["1", "2", "5", "Unlimited"],
+          correctAnswer: 1
+        },
+        {
+          id: 2,
+          question: "What is required before you can submit a bug?",
+          options: ["Team leader approval", "Customer permission", "Starting a Test Session", "Finding at least 5 bugs"],
+          correctAnswer: 2
+        },
+        {
+          id: 3,
+          question: "Who makes the final decision on bug reports?",
+          options: ["Other testers", "The team leader only", "The customer", "The tester who submitted it"],
+          correctAnswer: 2
+        }
+      ],
+      passingScore: 80
     }
   }
 ];
@@ -530,15 +524,15 @@ export const instructors: Instructor[] = [
   {
     id: 1,
     name: "Sarah Chen",
-    title: "Senior QA Engineer",
-    bio: "With over 10 years of experience in software testing, Sarah has led quality initiatives at Fortune 500 companies. She's passionate about exploratory testing and believes in the power of curiosity-driven quality assurance.",
+    title: "Senior QA Engineer & Testing Mentor",
+    bio: "With 10+ years of experience in software testing across Fortune 500 companies, Sarah brings real-world expertise to the academy. She specializes in exploratory testing methodologies and has trained over 500 testers worldwide.",
     image: ""
   },
   {
     id: 2,
-    name: "Marcus Thompson",
-    title: "Testing Architect",
-    bio: "Marcus is a testing thought leader who has trained thousands of testers worldwide. He specializes in test strategy, automation, and building quality-focused cultures. When not testing, he speaks at conferences globally.",
+    name: "Marcus Rodriguez",
+    title: "Test Automation Lead & Bug Hunting Expert",
+    bio: "Marcus is a passionate advocate for quality software. Starting as a crowdsource tester, he now leads testing initiatives for major tech companies. He's known for finding critical bugs that others miss.",
     image: ""
   }
 ];
